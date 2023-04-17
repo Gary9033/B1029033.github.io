@@ -106,6 +106,24 @@
                <td>B1029033</td>
             </tr>
         </table>
-        
+        <script>
+            var password = 123456789;
+            var limit=5;
+            var input;
+            input = prompt("請輸入密碼");
+            while(limit >= 0){
+              if(password != input ){
+                if(limit==0){
+                  alert("你被鎖了");
+                  break;
+                }
+                input=prompt("密碼錯誤還剩"+limit+"次機會");
+                limit--;
+              }else{
+                alert("登入成功");
+                break;
+              }
+            }
+        </script>
     </body>
 </html>
